@@ -106,7 +106,7 @@ src
 
 [SymptoMate ERD](https://app.diagrams.net/#G1t8KrwEQgF-0WHvOmqP9IGG-CJVW4l0eS)
 
-![SymptoMate ERD](https://i.ibb.co/R2Y4L0t/Screen-Shot-2021-03-05-at-2-51-40-AM.png)
+![SymptoMate ERD](https://i.ibb.co/WgPttzR/Screen-Shot-2021-03-05-at-11-52-22-AM.png)
 <br>
 
 ***
