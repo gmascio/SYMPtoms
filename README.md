@@ -1,7 +1,7 @@
 # SYMPtoms
 ## Overview
 
-_**SYMPtoms** SYMPtoms is a platforms where users can login, browse through illnesses and share their symptoms/experiences regarding the illness of their choice. As a registered user, one can post, edit, and delete one's symptoms/experiences. With SYMPtoms, I hope to create a platform of discourse for those who seek real experiences and real symptoms._
+_**SymptoMate** SymptoMate is a platforms where users can login, browse through illnesses and share their symptoms/experiences regarding the illness of their choice. As a registered user, one can post, edit, and delete one's symptoms/experiences. With SymptoMate, I hope to create a platform of discourse for those who seek real experiences and real symptoms._
 
 
 <br>
@@ -104,9 +104,9 @@ src
 #### ERD Model
 
 
-[SYMPtoms ERD](https://app.diagrams.net/#G1t8KrwEQgF-0WHvOmqP9IGG-CJVW4l0eS)
+[SymptoMate ERD](https://app.diagrams.net/#G1t8KrwEQgF-0WHvOmqP9IGG-CJVW4l0eS)
 
-![Symptoms ERD](https://i.ibb.co/R2Y4L0t/Screen-Shot-2021-03-05-at-2-51-40-AM.png)
+![SymptoMate ERD](https://i.ibb.co/R2Y4L0t/Screen-Shot-2021-03-05-at-2-51-40-AM.png)
 <br>
 
 ***
