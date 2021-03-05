@@ -1,7 +1,7 @@
 # SymptoMate
 ## Overview
 
-_**SymptoMate** SymptoMate is a platforms where users can login, browse through illnesses and share their symptoms/experiences regarding the illness of their choice. As a registered user, one can post, edit, and delete one's symptoms/experiences. With SymptoMate, I hope to create a platform of discourse for those who seek real experiences and real symptoms._
+_**SymptoMate** SymptoMate is a platform where users can login, browse through illnesses and share their symptoms/experiences regarding the illness of their choice. As a registered user, one can post, edit, and delete one's symptoms/experiences. With SymptoMate, I hope to create a platform of discourse for those who seek real experiences and real symptoms._
 
 
 <br>
