@@ -93,7 +93,7 @@ src
 | Create Front-end Architecture   | H           |     6 hrs     |     TBD      |     TBD    |     TBD     |
 | Full CRUD Front-end              |    H      |     6 hrs      |     TBD    |     TBD     |
 | CSS Styling               |     H     |     6 hrs      |     TBD    |     TBD     |
-| TOTAL          H     |          |     35 hrs      |     TBD    |     TBD     |
+| TOTAL              |     H     |     35 hrs      |     TBD    |     TBD     |
 
 
 
