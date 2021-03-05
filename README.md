@@ -8,26 +8,18 @@ _**SYMPtoms** SYMPtoms is a platforms where users can login, browse through illn
 
 ## MVP
 
-> - Client: Wire-frames, component hierarchy, component breakdown, and time-frame estimates.
-- Server: Data architecture, ERD model, and API endpoint documentation.
-- Dependencies: A full list of all libraries, frameworks, etc.
 
 
-
-<br>
-
-### Goals
-
-- Have a thoroughly developed README.md file.
-- Build a Ruby on Rails server, exposing RESTful JSON endpoints
-- Consume data from your Ruby on Rails API, and render that data in your components.
-- Functional CRUD
-- Functional authorization
-- Three tables with atleast one association between tables.
-- Have a working, interactive React app, built using npx create-react-app.
-- Responsiveness front-end
-- Utilize proper linting
-- Deploy back-end via Heroku and front-end via Surge or Netlify
+- [ ] Have a thoroughly developed README.md file.
+- [ ] Build a Ruby on Rails server, exposing RESTful JSON endpoints
+- [ ] Consume data from your Ruby on Rails API, and render that data in your components.
+- [ ] Functional CRUD
+- [ ] Functional authorization
+- [ ] Three tables with atleast one association between tables.
+- [ ] Have a working, interactive React app, built using npx create-react-app.
+- [ ] Responsiveness front-end with atleast two media-queries for two screens
+- [ ] Utilize proper linting
+- [ ] Deploy back-end via Heroku and front-end via Surge or Netlify
 
 <br>
 
@@ -57,7 +49,7 @@ _**SYMPtoms** SYMPtoms is a platforms where users can login, browse through illn
 
 
 
-- Mobile Resource Index
+
 
 #### Component Tree
 
@@ -73,26 +65,35 @@ _**SYMPtoms** SYMPtoms is a platforms where users can login, browse through illn
 ``` structure
 
 src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
+|__ screens/
+      |__ Register.jsx
+      |__ Login.jsx
+      |__ SymptomCreate.jsx
+      |__ Illnesses.jsx
 |__ components/
-      |__ Header.jsx
-|__ services/
+      |__ Symptoms.jsx.
+      |__ SymptomsEdit.jsx
+|__ containers/
+      |__ MainContainer.jsx
+|__layouts
+      |__Layout.jsx
 
 ```
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Make Tables with Appropriate Associations   |    H     |     1 hrs      |      TBD    |     TBD    |
+| Create Back-end Architecture |    H     |     2 hrs      |     TBD     |     TBD     |
+| Create Seed               |       H   |     2 hrs      |     TBD    |     TBD     |
+| Authorization               |    H      |     2 hrs      |     TBD    |     TBD     |
+| Full CRUD Back-end              |     H     |     4 hrs      |     TBD    |     TBD     |
+| Create Front-end Architecture   | H           |     6 hrs     |     TBD      |     TBD    |     TBD     |
+| Full CRUD Front-end              |    H      |     6 hrs      |     TBD    |     TBD     |
+| CSS Styling               |     H     |     6 hrs      |     TBD    |     TBD     |
+| TOTAL          H     |          |     35 hrs      |     TBD    |     TBD     |
 
 
 
@@ -102,7 +103,6 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
 [SYMPtoms ERD](https://app.diagrams.net/#G1t8KrwEQgF-0WHvOmqP9IGG-CJVW4l0eS)
 
@@ -112,7 +112,7 @@ src
 ***
 
 ## Post-MVP
-* Add a carousel with user symptoms 
+* Add a carousel with user symptoms as cards 
 * Incorporate a split screen npm package
 * Add a contact page
 
