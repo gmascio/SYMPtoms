@@ -10,13 +10,15 @@ export default function Layout(props) {
         <Link to='/'><h1>SymptoMate</h1></Link>
         {
           currentUser ?
-            <>
-              <p>{currentUser.username}</p>
+          <>
+              <p>Welcome, {currentUser.username}</p>
+              <Link to='/addsymptom'>Add a Symptom</Link>
               <button onClick={handleLogout}>Logout</button>
             </>
             :
             <Link to='/login'>Login/SignUp</Link>
-        }
+          }
+          
         <hr />
       </header>
       {props.children}

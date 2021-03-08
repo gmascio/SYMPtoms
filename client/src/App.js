@@ -52,7 +52,7 @@ function App() {
 
   return (
     <>
-      <Layout />
+      <Layout currentUser={currentUser} handleLogout={handleLogout} />
       <Switch>
         <Route path='/login'>
           <Login handleLogin={handleLogin} error={error} />
@@ -61,7 +61,7 @@ function App() {
           <Register handleRegister={handleRegister}/>
         </Route>
         <Route path= '/'>
-          <MainContainer/>
+          <MainContainer currentUser={currentUser}/>
         </Route>
       </Switch>
       
