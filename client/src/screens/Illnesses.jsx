@@ -11,6 +11,9 @@ function Illnesses(props) {
       {illnesses.map((illness) => (
         <React.Fragment key={illness.id}>
           <Link to={`/illnesses/${illness.id}`}><p>{illness.name}</p></Link>
+          <Link to={`/illnesses/${illness.id}`}>
+            <img src={illness.image} alt={illness.name}></img>
+            </Link>
          
         </React.Fragment>
       ))}

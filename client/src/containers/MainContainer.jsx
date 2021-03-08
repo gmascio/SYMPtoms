@@ -1,7 +1,7 @@
 import React from 'react';
 import Illnesses from '../screens/Illnesses';
 import { useState, useEffect} from 'react';
-import { Route ,  useHistory  } from 'react-router-dom';
+import { Route , useHistory} from 'react-router-dom';
 import { getAllIllnesses } from '../services/illnesses';
 import { destroySymptom, getAllSymptoms, postSymptom, putSymptom } from '../services/symptoms';
 
