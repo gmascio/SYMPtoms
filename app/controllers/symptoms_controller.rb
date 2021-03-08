@@ -1,5 +1,6 @@
 class SymptomsController < ApplicationController
-  before_action :set_symptom, only: [:show, :update, :destroy]
+  before_action :set_symptom, only: [:show ]
+  before_action : authorize_request, only [:create, :update, :destroy]
 
   # GET /symptoms
   def index
@@ -16,7 +17,7 @@ class SymptomsController < ApplicationController
   # POST /symptoms
   def create
     @symptom = Symptom.new(symptom_params)
-
+    @symptom.user = current_user
     if @symptom.save
       render json: @symptom, status: :created, location: @symptom
     else
@@ -26,6 +27,7 @@ class SymptomsController < ApplicationController
 
   # PATCH/PUT /symptoms/1
   def update
+    @illness = @current_user.illnesses.find(params[:id])
     if @symptom.update(symptom_params)
       render json: @symptom
     else
@@ -35,6 +37,7 @@ class SymptomsController < ApplicationController
 
   # DELETE /symptoms/1
   def destroy
+    @illness = @current_user.illnesses.find(params[:id])
     @symptom.destroy
   end
 
