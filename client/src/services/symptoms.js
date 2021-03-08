@@ -1,26 +1,26 @@
 import api from './api-config';
 
-export const getAllIllnesses = async () => {
-  const resp = await api.get('/illnesses');
+export const getAllSymptoms = async () => {
+  const resp = await api.get('/symptoms');
   return resp.data;
 }
 
-export const getOneIllness = async (id) => {
-  const resp = await api.get(`/illnesses/${id}`);
+export const getOneSymptom = async (id) => {
+  const resp = await api.get(`/symptoms/${id}`);
   return resp.data;
 }
 
-export const postIllness = async (illnessData) => {
-  const resp = await api.post('/Illnesses', { illness: illnessData });
+export const postSymptom = async (symptomData) => {
+  const resp = await api.post('/Symptoms', { symptom: symptomData });
   return resp.data;
 }
 
-export const putIllness = async (id, illnessData) => {
-  const resp = await api.put(`/illnesses/${id}`, { illness: illnessData });
+export const putSymptom = async (id, symptomData) => {
+  const resp = await api.put(`/symptoms/${id}`, { symptom: symptomData });
   return resp.data;
 }
 
-export const destroyIllness = async (id) => {
-  const resp = await api.delete(`/illnesses/${id}`);
+export const destroySymptom = async (id) => {
+  const resp = await api.delete(`/symptoms/${id}`);
   return resp;
 }
