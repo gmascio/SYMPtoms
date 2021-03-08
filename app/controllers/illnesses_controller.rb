@@ -1,5 +1,5 @@
 class IllnessesController < ApplicationController
-  # before_action :set_illness, only: [:show ]
+  before_action :set_illness, only: [:show ]
   # before_action :authorize_request, only: [:create, :update, :destroy]
   # GET /illnesses
   def index
@@ -10,7 +10,7 @@ class IllnessesController < ApplicationController
 
   # GET /illnesses/1
   def show
-    render json: @illness, include:symptoms
+    render json: @illness, include: :symptoms
   end
 
   # POST /illnesses
@@ -24,30 +24,31 @@ class IllnessesController < ApplicationController
 #     end
 #   end
 
-#   # PATCH/PUT /illnesses/1
-#   def update
-#     @illness = @current-user.fods.find(params[:id])
-#     if @illness.update(illness_params)
-#       render json: @illness
-#     else
-#       render json: @illness.errors, status: :unprocessable_entity
-#     end
-#   end
+  # PATCH/PUT /illnesses/1
+  # def update
 
-#   # DELETE /illnesses/1
-#   def destroy
-#     @illness = @current_user.foods.find(params[:id])
-#     @illness.destroy
-#   end
+  #   @illness = @current-user.fods.find(params[:id])
+  #   if @illness.update(illness_params)
+  #     render json: @illness
+  #   else
+  #     render json: @illness.errors, status: :unprocessable_entity
+  #   end
+  # end
 
-#   private
-#     # Use callbacks to share common setup or constraints between actions.
-#     def set_illness
-#       @illness = Illness.find(params[:id])
-#     end
+  # DELETE /illnesses/1
+  # def destroy
+  #   @illness = @current_user.foods.find(params[:id])
+  #   @illness.destroy
+  # end
 
-#     # Only allow a list of trusted parameters through.
-#     def illness_params
-#       params.require(:illness).permit(:name, :description)
-#     end
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_illness
+      @illness = Illness.find(params[:id])
+    end
+
+    # Only allow a list of trusted parameters through.
+    def illness_params
+      params.require(:illness).permit(:name, :description)
+    end
 end
