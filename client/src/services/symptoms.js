@@ -11,7 +11,7 @@ export const getOneIllness = async (id) => {
 }
 
 export const postIllness = async (illnessData) => {
-  const resp = await api.post('/Illnesses', { illness: llnesseData });
+  const resp = await api.post('/Illnesses', { illness: illnessData });
   return resp.data;
 }
 
