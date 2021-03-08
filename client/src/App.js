@@ -58,7 +58,7 @@ function App() {
           <Login handleLogin={handleLogin} error={error} />
         </Route>
         <Route path= '/register'>
-          <Register/>
+          <Register handleRegister={handleRegister}/>
         </Route>
         <Route path= '/'>
           <MainContainer/>
