@@ -50,4 +50,4 @@ class IllnessesController < ApplicationController
 #     def illness_params
 #       params.require(:illness).permit(:name, :description)
 #     end
-# end
+end
