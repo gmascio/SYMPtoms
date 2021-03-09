@@ -1,8 +1,11 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import Illness from './Illness'
 
 function Illnesses(props) {
-  const {illnesses} = props
+  const { illnesses } = props
+ 
   return (
     <div>
       <h3>
@@ -10,10 +13,7 @@ function Illnesses(props) {
       </h3>
       {illnesses.map((illness) => (
         <React.Fragment key={illness.id}>
-          <Link to={`/illnesses/${illness.id}`}><p>{illness.name}</p></Link>
-          <Link to={`/illnesses/${illness.id}`}>
-            <img src={illness.image} alt={illness.name}></img>
-            </Link>
+          <Illness illness={illness}/>
          
         </React.Fragment>
       ))}
