@@ -1,13 +1,16 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import {getOneIllness} from '../services/illnesses'
+import { getOneIllness } from '../services/illnesses';
+import { Link } from 'react-router-dom';
 
 export default function IllnessDetail(props) {
   const [illnessItem, setIllnessItem] = useState(null);
   // const [selectedFlavor, setSelectedFlavor] = useState('')
   const { id } = useParams();
   const { symptoms } = props;
+  const { currentUser } = props;
+  const { illnesses } = props;
   useEffect(() => {
     const fetchIllnessItem = async () => {
       const illnessData = await getOneIllness(id);
@@ -30,6 +33,16 @@ export default function IllnessDetail(props) {
 
     return (
       <div>
+        <div>
+               {
+          currentUser ?
+          <>
+              <Link to='/symptom/new'>Add a Symptom</Link>
+            </>
+            :
+            <Link to='/login'>Login/SignUp</Link>
+          }
+          </div>
         <h3>{illnessItem?.name}</h3>
         <p>{illnessItem?.description}</p>
         {illnessItem?.symptoms.map((symptom) => (

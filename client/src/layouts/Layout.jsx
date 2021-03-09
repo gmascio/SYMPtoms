@@ -12,7 +12,7 @@ export default function Layout(props) {
           currentUser ?
           <>
               <p>Welcome, {currentUser.username}</p>
-              <Link to='/symptom/new'>Add a Symptom</Link>
+            
               <button onClick={handleLogout}>Logout</button>
             </>
             :
