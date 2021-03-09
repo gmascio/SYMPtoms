@@ -11,6 +11,7 @@ export default function IllnessDetail(props) {
   const { symptoms } = props;
   const { currentUser } = props;
   const { illnesses } = props;
+  const { handleDelete } = props;
   useEffect(() => {
     const fetchIllnessItem = async () => {
       const illnessData = await getOneIllness(id);
@@ -46,7 +47,16 @@ export default function IllnessDetail(props) {
         <h3>{illnessItem?.name}</h3>
         <p>{illnessItem?.description}</p>
         {illnessItem?.symptoms.map((symptom) => (
+        <React.Fragment key ={symptom.id}>
           <p key={symptom.id}>{symptom.description}</p>
+          <>
+              <button>edit</button>
+              <button onClick={() => handleDelete(symptom.id)}>delete</button>
+            </>
+            </React.Fragment>
+            
+        
+            
         ))}
       </div>
     )

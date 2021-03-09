@@ -60,7 +60,7 @@ function MainContainer(props) {
     <div>
       <Switch>
         <Route path="/illnesses/:id">
-          <IllnessDetail symptoms={symptoms} currentUser={currentUser} illnesses={illnesses}/>
+          <IllnessDetail symptoms={symptoms} currentUser={currentUser} illnesses={illnesses} handleDelete={handleDelete}/>
         </Route>
         <Route path="/symptom/new">
           <SymptomCreate handleCreate={handleCreate} />

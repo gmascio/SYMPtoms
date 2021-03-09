@@ -22,7 +22,7 @@ function SymptomCreate(props) {
       handleCreate(formData);
     }}>
       <h3>Create Symptom</h3>
-      <label>Name:
+      <label>Symptom:
         <input
           type='text'
           name='name'
