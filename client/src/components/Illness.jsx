@@ -10,17 +10,20 @@ function Illness(props) {
   //     </p>
   // </div>
   // console.log(illnesses.description)
-  const linkName=readMore?'Read Less << ':'Read More >> '
+  const linkName=readMore?'Read Less << ':'Learn More >> '
   return (
-    <div>
-       <Link to={`/illnesses/${illness.id}`}><p>{illness.name}</p></Link>
-          <Link to={`/illnesses/${illness.id}`}>
-            <img src={illness.image} alt={illness.name} width="75" height="75"></img>
+    <div className= "illness-card">
+      <Link to={`/illnesses/${illness.id}`}>
+        <h5>{illness.name}</h5></Link>
+      <Link to={`/illnesses/${illness.id}`}>
+        <div className="illness-image">
+          <img src={illness.image} alt={illness.name} width="85" height="95"></img>
+          </div>
             </Link>
           <div>
            
             <a className="read-more-link" onClick={()=>{setReadMore(!readMore)}}><h2>{linkName}</h2></a>
-      {readMore && illness.description}
+      <p>{readMore && illness.description}</p>
             </div>
     </div>
   )

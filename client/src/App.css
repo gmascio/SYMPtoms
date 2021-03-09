@@ -1,11 +1,60 @@
-
+body {
+  background-color: #647fa6;
+}
 .read-more-link{
   color: blueviolet;
   /* text-decoration: underline; */
   letter-spacing: 1px;
   cursor: pointer;
 }
-.extra-content{
-  color: cornflowerblue;
-  font-weight: 500;
+*
+{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
+
+
+
+.illness-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 18em;
+  width: 30vw;
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+  flex-direction:column;
+
+
+  border-radius:16px;
+  overflow:hidden;
+  
+  box-shadow:  10px 10px 20px #B1BFD2, -10px -10px 27px #B1BFD2;
+
+}
+
+.illnesses{
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  
+}
+h5 
+{
+  margin:0px;
+  font-size:1.4em;
+  font-weight:700;
+}
+.illness-image{
+  height:6em;
+  width:18em;
+  margin: auto;
+  
+  
+}
+
