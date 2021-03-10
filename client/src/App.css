@@ -22,6 +22,19 @@ a {
 }
 #title {
   font-size: 2.5em;
+  font-family: 'Exo 2', sans-serif;
+  color: rgb(168, 32, 32);
+}
+.illness-title {
+  color: rgb(168, 32, 32);
+  font-family: 'Exo 2', sans-serif;
+  font-size: 2em;
+}
+
+.illness-titles {
+  color: rgb(168, 32, 32);
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.4em;
 }
 .logout-button{
   height: 2.2em;
@@ -33,7 +46,7 @@ a {
   flex-direction: row ;
   border-bottom: white;
   justify-content: space-between;
-  background-color: #647fa6;
+  background-color: rgba(100,127,166,.91);
 
   
   
@@ -99,3 +112,45 @@ h5
   
 }
 
+.illness-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-items: center;
+}
+.illness-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 18em;
+  width: 60vw;
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+  flex-direction:column;
+
+
+  border-radius:16px;
+  overflow:hidden;
+  
+  box-shadow:  10px 10px 20px #647fa6, -10px -10px 27px #647fa6;
+}
+.illness-detail-image {
+  width: 4em;
+  height: 4em;
+}
+.symptom-card {
+  margin: 10px;
+  width: 40vw;
+  max-width: 600px;
+  border-left: 6px solid rgb(168, 32, 32);
+  background-color: rgba(100,127,166,.51);
+  transform: translate(50%, 0);
+}
+.symptom-description {
+  color: rgb(168, 32, 32);
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.1em;
+  margin: 15px;
+}

@@ -14,7 +14,7 @@ function Illness(props) {
   return (
     <div className= "illness-card">
       <Link to={`/illnesses/${illness.id}`}>
-        <h5>{illness.name}</h5></Link>
+        <h5 className="illness-titles">{illness.name}</h5></Link>
       <Link to={`/illnesses/${illness.id}`}>
         <div className="illness-image">
           <img className= "illness-pic" src={illness.image} alt={illness.name} width="85" height="95"></img>

@@ -34,7 +34,7 @@ export default function IllnessDetail(props) {
     // }, [id])
 
     return (
-      <div>
+      <div className= "illness-detail">
         <div>
                {
           currentUser ?
@@ -44,12 +44,18 @@ export default function IllnessDetail(props) {
             :
             <Link to='/login'>Login/SignUp</Link>
           }
-          </div>
-        <h3>{illnessItem?.name}</h3>
-        <p>{illnessItem?.description}</p>
+        </div>
+        <div className='illness-cards'>
+          <h3 className='illness-title'>{illnessItem?.name}</h3>
+          <img className='illness-detail-image' src={illnessItem?.image}/>
+          <p>{illnessItem?.description}</p>
+        </div>
+        
+        
         {illnessItem?.symptoms.map((symptom) => (
-        <React.Fragment key ={symptom.id}>
-          <p key={symptom.id}>{symptom.description}</p>
+        <div className= 'symptom-card'>
+          <React.Fragment key={symptom.id}>
+          <p className= 'symptom-description' key={symptom.id}>{symptom.description}</p>
           <>
               <Link to={`/symptom/edit/${symptom.id}`}><button>edit</button></Link>
               <button onClick={() => handleDelete(symptom.id)}>delete</button>
@@ -58,6 +64,7 @@ export default function IllnessDetail(props) {
             
         
             
+          </div>
         ))}
       </div>
     )
