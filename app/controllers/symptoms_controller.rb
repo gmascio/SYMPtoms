@@ -1,5 +1,5 @@
 class SymptomsController < ApplicationController
-  before_action :set_symptom, only: [:show ]
+  before_action :set_symptom, only: [:show, :destroy, :update ]
   before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET /symptoms
@@ -38,7 +38,7 @@ class SymptomsController < ApplicationController
 
   # DELETE /symptoms/1
   def destroy
-    @symptom = @current_user.symptoms.find(params[:id])
+    # @symptom = @current_user.symptoms.find(params[:id])
     @symptom.destroy
   end
 

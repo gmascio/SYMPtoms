@@ -51,7 +51,7 @@ export default function IllnessDetail(props) {
         <React.Fragment key ={symptom.id}>
           <p key={symptom.id}>{symptom.description}</p>
           <>
-              <Link to={`/symptom/edit/${illnessItem.id}`}><button>edit</button></Link>
+              <Link to={`/symptom/edit/${symptom.id}`}><button>edit</button></Link>
               <button onClick={() => handleDelete(symptom.id)}>delete</button>
             </>
             </React.Fragment>

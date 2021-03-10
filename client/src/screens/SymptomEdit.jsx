@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { getOneIllness, getOneSymptom } from '../services/symptoms';
 import { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 
@@ -9,16 +9,27 @@ export default function SymptomEdit(props) {
     description: ''
   });
   const { description } = formData;
-  const { illnesses,symptoms, handleUpdate, currentUser } = props;
+  const {  symptoms, handleUpdate, currentUser } = props;
   const { id } = useParams();
-  const params = useParams()
-  const ill_id = params.illness_id 
-
+  
+  
+  
+  const [symptom, setSymptom] = useState('')
+  useEffect(() => {
+    const fetchSymptom = async () => {
+      const singleSymptom = await getOneSymptom(id)
+      setSymptom(singleSymptom)
+    }
+    fetchSymptom()
+  },[])
+    // console.log(symptom)
+    
   useEffect(() => {
     const prefillFormData = () => {
       const symptomItem = symptoms.find((symptom) => symptom.id === Number(id));
+      console.log(symptom)
       setFormData({
-        name: symptomItem.description
+        description: symptomItem.description
       });
     }
     if (symptoms.length) {
@@ -36,14 +47,14 @@ export default function SymptomEdit(props) {
   return (
     <form onSubmit={(e) => {
       e.preventDefault();
-      handleUpdate({id, ...formData, user_id: currentUser.id, illness_id: ill_id } );
+      handleUpdate({ id,  ...formData, illness_id: symptom.illness_id } );
       history.push('/')
     }}>
-      <h3>Edit Food</h3>
+      <h3>Edit Symptom</h3>
       <label>Name:
         <input
           type='text'
-          name='name'
+          name='description'
           value={description}
           onChange={handleChange}
         />

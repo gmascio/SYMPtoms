@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  flex-direction: row ;
+  border-bottom: white;
+  justify-content: space-around;
+  background-color: #647fa6;
+
+  
+  
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  border-bottom: white;
+  justify-content: space-around;
+  background-color: #647fa6;
+  
+  
+}
+
+#title {
+  margin: auto;
+}

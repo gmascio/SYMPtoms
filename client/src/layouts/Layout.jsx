@@ -6,21 +6,27 @@ export default function Layout(props) {
 
   return (
     <div className="App">
-      <header>
-        <Link to='/'><h1>SymptoMate</h1></Link>
+      <nav>
+        <div className="nav">
+          <div className= "logos">
+        <img className='logo' src="https://i.ibb.co/CWyQhfK/d208e06b-891b-468d-9c61-f8f2c0ee7c4a-200x200-1.png" alt="symptoMate logo" border="0"/>
+            <Link to='/'><h1 id="title">SymptoMate</h1></Link>
+          </div>
+          <div className="users">
         {
           currentUser ?
           <>
               <p>Welcome, {currentUser.username}</p>
             
-              <button onClick={handleLogout}>Logout</button>
+              <button className= "logout-button" onClick={handleLogout}>Logout</button>
             </>
             :
             <Link to='/login'>Login/SignUp</Link>
           }
           
-        <hr />
-      </header>
+          </div>
+      </div>
+      </nav>
       {props.children}
     </div>
   )

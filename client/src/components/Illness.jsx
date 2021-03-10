@@ -17,7 +17,7 @@ function Illness(props) {
         <h5>{illness.name}</h5></Link>
       <Link to={`/illnesses/${illness.id}`}>
         <div className="illness-image">
-          <img src={illness.image} alt={illness.name} width="85" height="95"></img>
+          <img className= "illness-pic" src={illness.image} alt={illness.name} width="85" height="95"></img>
           </div>
             </Link>
           <div>
