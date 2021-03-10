@@ -17,9 +17,9 @@ class SymptomsController < ApplicationController
   # POST /symptoms
   def create
     @symptom = Symptom.new(symptom_params)
-    @symptom.user = current_user
+    @symptom.user = @current_user
     if @symptom.save
-      render json: @symptom, status: :created, location: @symptom
+      render json: @symptom, status: :created 
     else
       render json: @symptom.errors, status: :unprocessable_entity
     end

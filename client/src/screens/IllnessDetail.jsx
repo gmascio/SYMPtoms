@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getOneIllness } from '../services/illnesses';
 import { Link } from 'react-router-dom';
+import SymptomCreate from './SymptomCreate';
 
 export default function IllnessDetail(props) {
   const [illnessItem, setIllnessItem] = useState(null);
@@ -38,7 +39,7 @@ export default function IllnessDetail(props) {
                {
           currentUser ?
           <>
-              <Link to='/symptom/new'>Add a Symptom</Link>
+                <Link to={`/symptom/new/${illnessItem?.id}`}>Add a Symptom</Link>
             </>
             :
             <Link to='/login'>Login/SignUp</Link>
@@ -50,8 +51,8 @@ export default function IllnessDetail(props) {
         <React.Fragment key ={symptom.id}>
           <p key={symptom.id}>{symptom.description}</p>
           <>
-              <button>edit</button>
-              <button onClick={() => handleDelete(symptom.id)}>delete</button>
+              <Link to={`/symptom/edit/${illnessItem.id}`}><button>edit</button></Link>
+              <button onClick={() => handleDelete(illnessItem.id)}>delete</button>
             </>
             </React.Fragment>
             

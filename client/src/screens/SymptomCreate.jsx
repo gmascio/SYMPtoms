@@ -1,17 +1,33 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
+import { useHistory, useParams } from 'react-router-dom'
 
-import { useState } from 'react';
 function SymptomCreate(props) {
+  const { handleCreate, illnesses, currentUser } = props;
+  console.log(illnesses)
+  console.log(currentUser)
+  const history = useHistory()
+  const params = useParams()
+  const ill_id = params.illness_id 
+  // const id = { currentUser && (
+  //   currentUser.id
+  // }
+  console.log(ill_id)
   const [formData, setFormData] = useState({
-    description: ''
+    description: '',
+    // user_id: currentUser ? currentUser.id : "1",
+    // illness_id: ill_id? Number(ill_id) : '',
   });
+  useEffect(() => {
+    setFormData(formData)
+    
+},[currentUser])
   const { description } = formData;
-  const { handleCreate } = props;
-
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
+    setFormData(formData => ({
+      ...formData,
       [name]: value
     }))
   }
@@ -19,13 +35,14 @@ function SymptomCreate(props) {
   return (
     <form onSubmit={(e)=>{
       e.preventDefault();
-      handleCreate(formData);
+      handleCreate({ ...formData, user_id: currentUser.id , illness_id: ill_id});
+      history.push('/')
     }}>
       <h3>Create Symptom</h3>
       <label>Symptom:
         <input
           type='text'
-          name='name'
+          name='description'
           value={description}
           onChange={handleChange}
         />

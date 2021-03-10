@@ -11,7 +11,7 @@ export const getOneSymptom = async (id) => {
 }
 
 export const postSymptom = async (symptomData) => {
-  const resp = await api.post('/Symptoms', { symptom: symptomData });
+  const resp = await api.post('/symptoms', { symptom: symptomData });
   return resp.data;
 }
 

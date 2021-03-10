@@ -12,6 +12,7 @@ import {
 import IllnessDetail from "../screens/IllnessDetail";
 import Symptoms from "../screens/Symptoms";
 import SymptomCreate from "../screens/SymptomCreate";
+import SymptomEdit from "../screens/SymptomEdit";
 
 function MainContainer(props) {
   const [illnesses, setIllnesses] = useState([]);
@@ -62,11 +63,14 @@ function MainContainer(props) {
         <Route path="/illnesses/:id">
           <IllnessDetail symptoms={symptoms} currentUser={currentUser} illnesses={illnesses} handleDelete={handleDelete}/>
         </Route>
-        <Route path="/symptom/new">
-          <SymptomCreate handleCreate={handleCreate} />
+        <Route path="/symptom/new/:illness_id">
+          <SymptomCreate handleCreate={handleCreate} currentUser={currentUser} illnesses={illnesses}/>
         </Route>
         <Route path="/symptoms">
           <Symptoms symptoms={symptoms} handleDelete={handleDelete} />
+        </Route>
+        <Route>
+          <SymptomEdit path= '/symptom/edit/:id/'/>
         </Route>
         <Route path="/">
           <Illnesses illnesses={illnesses} />
