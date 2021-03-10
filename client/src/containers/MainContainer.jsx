@@ -69,8 +69,8 @@ function MainContainer(props) {
         <Route path="/symptoms">
           <Symptoms symptoms={symptoms} handleDelete={handleDelete} />
         </Route>
-        <Route>
-          <SymptomEdit path= '/symptom/edit/:id/'/>
+        <Route path = '/symptom/edit/:id/'>
+          <SymptomEdit symptoms={symptoms} handleUpdate={handleUpdate} currentUser={currentUser}/>
         </Route>
         <Route path="/">
           <Illnesses illnesses={illnesses} />

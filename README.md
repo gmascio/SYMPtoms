@@ -43,7 +43,7 @@ _**SymptoMate** SymptoMate is a platform where users can login, browse through i
 
 
 
-[Complete Wireframe flow](https://lucid.app/lucidchart/90707d6c-d867-43ba-aab2-f3358670e613/edit?page=0_0#?folder_id=search)
+[Complete Wireframe flow](https://lucid.app/lucidchart/invitations/accept/31c7f198-04b7-48db-bd69-8a9c3e15778e)
 
 
 

@@ -27,7 +27,8 @@ class SymptomsController < ApplicationController
 
   # PATCH/PUT /symptoms/1
   def update
-    @illness = @current_user.illnesses.find(params[:id])
+    
+    @symptom = @current_user.symptoms.find(params[:id])
     if @symptom.update(symptom_params)
       render json: @symptom
     else
@@ -37,7 +38,7 @@ class SymptomsController < ApplicationController
 
   # DELETE /symptoms/1
   def destroy
-    @illness = @current_user.illnesses.find(params[:id])
+    @symptom = @current_user.symptoms.find(params[:id])
     @symptom.destroy
   end
 
