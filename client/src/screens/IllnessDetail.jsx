@@ -35,20 +35,21 @@ export default function IllnessDetail(props) {
 
     return (
       <div className= "illness-detail">
-        <div>
-               {
-          currentUser ?
-          <>
-                <Link to={`/symptom/new/${illnessItem?.id}`}>Add a Symptom</Link>
-            </>
-            :
-            <Link to='/login'>Login/SignUp</Link>
-          }
-        </div>
+        
         <div className='illness-cards'>
           <h3 className='illness-title'>{illnessItem?.name}</h3>
           <img className='illness-detail-image' src={illnessItem?.image}/>
           <p>{illnessItem?.description}</p>
+          <div>
+               {
+          currentUser ?
+          <>
+                <Link to={`/symptom/new/${illnessItem?.id}`}><button>Add a Symptom</button></Link>
+            </>
+            :
+            ""
+          }
+        </div>
         </div>
         
         
