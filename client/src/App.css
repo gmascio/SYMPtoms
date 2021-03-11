@@ -32,6 +32,9 @@ max-height: 90px;
   font-family: 'Exo 2', sans-serif;
   color: rgb(100,127,166);
   padding: 10px;
+  border-radius: 20%;
+  box-shadow:  10px 10px 20px #647fa6, -10px -10px 27px #647fa6;
+
 
 }
 *

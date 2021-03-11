@@ -7,8 +7,8 @@ function Illnesses(props) {
   const { illnesses } = props
   const [readMore,setReadMore]=useState(false);
   
-  const linkName = readMore ? 'Read Less << ' : 'About SymptoMate >> '
-  const info = 'Have you ever Googled your symptoms and found some very absurd,alarming diagnoses? SymptoMate is a platform where users can share symptoms experienced with pertinent illnesses. You have access to Real Symptoms from Real People!'
+  const linkName = readMore ? 'Read Less << ' : 'About SymptoMate 💬  '
+  const info = 'Have you ever Googled your symptoms and found some very absurd, alarming diagnoses? SymptoMate is a platform where users can share symptoms experienced associated with pertinent illnesses. You have access to Real Symptoms from Real People!'
  
   return (
     <>
