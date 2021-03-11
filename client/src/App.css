@@ -410,10 +410,9 @@ footer {
   .logout-button {
     margin-top: 40px
   }
-  .form {
-    font-size {
-      
-    }
+  form {
+    font-size: 2vw;
+    
   }
   
 }
