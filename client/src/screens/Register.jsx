@@ -18,6 +18,9 @@ export default function Register(props) {
   }
 
   return (
+    <div className='container'>
+            <img src="https://i.ibb.co/q9Kv4hM/Png-Item-1114822.png" alt="Png-Item-1114822" border="0"/>
+
     <form onSubmit={(e) => {
       e.preventDefault();
       handleRegister(formData);
@@ -54,6 +57,7 @@ export default function Register(props) {
       </label>
       <br />
       <button>Submit</button>
-    </form>
+      </form>
+      </div>
   )
 }

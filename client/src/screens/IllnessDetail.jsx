@@ -39,17 +39,17 @@ export default function IllnessDetail(props) {
         <div className='illness-cards'>
           <h3 className='illness-title'>{illnessItem?.name}</h3>
           <img className='illness-detail-image' src={illnessItem?.image}/>
-          <p>{illnessItem?.description}</p>
-          <div>
+          <div >
                {
           currentUser ?
           <>
-                <Link to={`/symptom/new/${illnessItem?.id}`}><button>Add a Symptom</button></Link>
+                <Link to={`/symptom/new/${illnessItem?.id}`}><button className='button'>Add a Symptom</button></Link>
             </>
             :
             ""
           }
         </div>
+          <p>{illnessItem?.description}</p>
         </div>
         
         
@@ -58,8 +58,8 @@ export default function IllnessDetail(props) {
           <React.Fragment key={symptom.id}>
           <p className= 'symptom-description' key={symptom.id}>{symptom.description}</p>
           <>
-              <Link to={`/symptom/edit/${symptom.id}`}><button>edit</button></Link>
-              <button onClick={() => handleDelete(symptom.id)}>delete</button>
+              <Link to={`/symptom/edit/${symptom.id}`}><button className='edit'>edit</button></Link>
+              <button className='edit' onClick={() => handleDelete(symptom.id)}>delete</button>
             </>
             </React.Fragment>
             

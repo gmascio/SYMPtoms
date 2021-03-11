@@ -45,6 +45,7 @@ export default function SymptomEdit(props) {
     }))
   }
   return (
+    <div className='container'>
     <form onSubmit={(e) => {
       e.preventDefault();
       handleUpdate( id, { ...formData, illness_id: symptom.illness_id });
@@ -61,6 +62,7 @@ export default function SymptomEdit(props) {
       </label>
       <br />
       <button>Submit</button>
-    </form>
+      </form>
+      </div>
   )
 }

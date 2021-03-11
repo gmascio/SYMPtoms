@@ -33,6 +33,7 @@ function SymptomCreate(props) {
   }
 
   return (
+    <div className='container'>
     <form onSubmit={(e)=>{
       e.preventDefault();
       handleCreate({ ...formData, user_id: currentUser.id , illness_id: ill_id});
@@ -49,7 +50,8 @@ function SymptomCreate(props) {
       </label>
       <br />
       <button>Submit</button>
-    </form>
+      </form>
+      </div>
   )
   
 }

@@ -18,7 +18,7 @@ export default function Layout(props) {
           <>
               <p>Welcome, {currentUser.username}</p>
             
-              <button className= "logout-button" onClick={handleLogout}>Logout</button>
+              <p className= "logout-button" onClick={handleLogout}>Logout</p>
             </>
             :
             <Link to='/login'>Login/SignUp</Link>
@@ -28,6 +28,7 @@ export default function Layout(props) {
       </div>
       </nav>
       {props.children}
+      
     </div>
   )
 }

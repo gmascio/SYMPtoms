@@ -14,10 +14,25 @@ max-width: 100px;
 max-height: 90px;
 }
 .read-more-link{
-  color: blueviolet;
+  color: rgba(100,127,166,.91);
   /* text-decoration: underline; */
   letter-spacing: 1px;
   cursor: pointer;
+  text-align: center;
+  margin: auto;
+  
+  
+}
+.about {
+  margin-top: 5vh;
+  margin-left: 100px;
+  margin-right: 100px;
+  border: 3px solid rgb(168, 32, 32);
+  text-align: center; 
+  font-family: 'Exo 2', sans-serif;
+  color: rgb(100,127,166);
+  padding: 10px;
+
 }
 *
 {
@@ -33,21 +48,88 @@ a {
   color: rgb(168, 32, 32);
   padding-top: 3vh;
 }
+.button {
+  position: relative;
+  background-color: whitesmoke;
+  border: none;
+  font-size: 2vw;
+  color: #FFFFFF;
+  padding: 10px;
+  width: 20vw;
+  max-width: 150px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  color:rgb(177, 33, 33);
+  text-shadow: 1px 1px 5px rgb(124, 15, 15);
+  margin-top: 5vh;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 20%;
+  border: 3px solid rgba(100,127,166,.91); 
+  
+}
+.edit .button {
+  transition-duration: 0.4s;
+}
+
+ .button:hover {
+  background-color: rgba(100,127,166,.91); 
+  
+}
+.edit:hover {
+  background-color: rgba(100,127,166,.91); 
+  
+}
+.edit {
+  position: relative;
+  background-color: white;
+  border: none;
+  font-size: 2vw;
+  color: #FFFFFF;
+  margin: 3px;
+  width: 10vw;
+  max-width: 150px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  color:rgb(112, 10, 10);
+  text-shadow: 2px 2px 8px rgb(124, 15, 15);
+  
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 20%;
+  border: 4px solid rgba(100,127,166,.91);
+}
+
+
+
 .illness-title {
   color: rgb(168, 32, 32);
   font-family: 'Exo 2', sans-serif;
-  font-size: 5.5vw;
+  font-size: 5.1vw;
+ 
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .illness-titles {
   color: rgb(168, 32, 32);
   font-family: 'Exo 2', sans-serif;
   font-size: 4.5vw;
+  margin-bottom: 4vh;
+  
 }
 .logout-button{
   height: 2.5vh;
   width: 10vw;
-  margin: 15px;
+  margin-top: 25px;
+  padding-left: 20px;
+  padding-right:10vw ;
+  
 }
 .nav {
   display: flex;
@@ -55,15 +137,19 @@ a {
   border-bottom: white;
   justify-content: space-between;
   background-color: rgba(100,127,166,.91);
-
+width: 100vw;
   
   
 }
 .users{
   display: flex;
   flex-direction: row;
-  margin-top: 30px;
+  margin-top: 7vh;
   padding-right: 20px;
+  margin-left: 10px;
+  justify-content: space-around;
+  font-family: 'Exo 2', sans-serif;
+  color:rgb(145, 27, 27)
   
 }
 
@@ -71,6 +157,7 @@ a {
   display: flex;
   flex-direction: row;
   padding-left: 40px;
+  padding-top: 3.1vh;
 }
 
 
@@ -107,11 +194,10 @@ a {
   
 }
 
-.illness-image{
-  height:6vh;
-  width:18em;
-  margin: auto;
-  
+.illness-pic{
+ width: 200px;
+ height: 150px;
+ 
   
 }
 
@@ -121,16 +207,16 @@ a {
   justify-content:space-evenly;
   align-items: center;
   margin: 3.5vh;
-  height: 80vh;
+  height: 100vh;
 }
 .illness-cards {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  height: 100vh;
   
-  width: 55vw;
+  width: 75vw;
   max-width: 800px;
   padding: 20px;
   
@@ -144,11 +230,13 @@ a {
   box-shadow:  10px 10px 20px #647fa6, -10px -10px 27px #647fa6;
 }
 .illness-detail-image {
-  width: 20vw;
-  height: 8vh;
+  width: 100%;
+  height: auto;
+  max-width: 300px;
 }
 .symptom-card {
   margin-top: 1.5vh ;
+  margin-bottom: 1.5vh;
   width: 40vw;
   max-width: 500px;
   border-left: 6px solid rgb(168, 32, 32);
@@ -158,12 +246,119 @@ a {
 .symptom-description {
   color: rgb(168, 32, 32);
   font-family: 'Exo 2', sans-serif;
-  font-size: 3vw;
+  font-size: 2.5vw;
   margin: 15px;
 }
 .illness-cards p {
   font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 2vw 1vh;
+  font-size: 25px;
   
   max-height: 300px;
+}
+h3 {
+  text-align: center;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 4vw;
+  color: rgb(168, 32, 32)
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(100,127,166,.51);
+  margin: 15vw;
+  padding: 20px;
+  font-family: 'Exo 2', sans-serif;
+  box-shadow:  10px 10px 20px #647fa6;
+
+}
+.container input {
+  padding: 10px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 20px;
+}
+.container button {
+  width: 20vw;
+  padding: 8px;
+  color:rgb(168, 32, 32) ;
+  font-size: 2vw;
+  box-shadow:  10px 10px 20px #647fa6;
+  border-radius: 20%;
+
+}
+.container img {
+  width: 100vw;
+  height: auto;
+  max-width: 200px;
+  max-width: 150px;
+  margin-top: 10vh;
+}
+footer {
+  background-color: rgba(100,127,166,.51);
+  position: fixed;
+  margin-top: 2%;
+  height: 50 ;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8em;
+  bottom: 0; 
+  margin-top: 20px;
+}
+
+@media (max-width: 500px) {
+  .illness-detail p {
+    font-size: 15px;
+  }
+  #title {
+    font-size: 25px;
+  }
+  .users p{
+    font-size: 15px;
+  }
+  .read-more-link h2 {
+    font-size: 15px;
+  }
+  .users {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .container img {
+    margin-top: 2vh;
+  }
+  .container p{
+    font-size: 18px ;
+  }
+  .container button {
+    font-size: 15px;
+  }
+  .container{
+    text-align: center;
+  }
+  form h3 {
+    font-size: 22px;
+  }
+  .illness-cards h3 {
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+  .illness-pic{
+    width: 110px;
+    height: 90px;
+    
+     
+   }
+}
+@media (min-width: 500px) {
+  .illness-titles {
+    font-size: 30px;
+
+  }
 }

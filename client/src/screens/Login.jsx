@@ -18,6 +18,8 @@ export default function Login(props) {
   }
 
   return (
+    <div className="container">
+      <img src="https://i.ibb.co/q9Kv4hM/Png-Item-1114822.png" alt="Png-Item-1114822" border="0"/>
     <form onSubmit={(e) => {
       e.preventDefault();
       handleLogin(formData);
@@ -47,8 +49,10 @@ export default function Login(props) {
         />
       </label>
       <br />
-      Don't have an account? Register <Link to='/register'>here</Link>
+      <p>Don't have an account?</p>
+      <p>Register <Link to='/register'>here</Link></p> 
       <button>Submit</button>
-    </form>
+      </form>
+      </div>
   )
 }
