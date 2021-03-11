@@ -24,7 +24,7 @@ max-height: 90px;
   
 }
 .about {
-  margin-top: 5vh;
+ 
   margin-left: 100px;
   margin-right: 100px;
   border: 3px solid rgb(168, 32, 32);
@@ -34,7 +34,9 @@ max-height: 90px;
   padding: 10px;
   border-radius: 20%;
   box-shadow:  10px 10px 20px #647fa6, -10px -10px 27px #647fa6;
-
+  width: 50vw;
+  margin: auto;
+  margin-top: 20px;
 
 }
 *
@@ -58,7 +60,7 @@ a {
   font-size: 2vw;
   color: #FFFFFF;
   padding: 10px;
-  width: 20vw;
+  width: 24vw;
   max-width: 150px;
   text-align: center;
   transition-duration: 0.4s;
@@ -114,7 +116,7 @@ a {
   font-family: 'Exo 2', sans-serif;
   font-size: 5.1vw;
  
-  margin: auto;
+  margin-bottom: 50px;
   text-align: center;
   margin-top: 10px;
 }
@@ -172,7 +174,7 @@ width: 100vw;
   height: 35vh;
   width: 30vw;
   padding: 20px;
-  margin: 20px;
+  margin: 35px;
   background-color: white;
   flex-direction:column;
 
@@ -194,6 +196,7 @@ width: 100vw;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin: 60px
   
 }
 
@@ -239,7 +242,7 @@ width: 100vw;
 }
 .symptom-card {
   margin-top: 1.5vh ;
-  margin-bottom: 1.5vh;
+  margin-bottom: 20px;
   width: 40vw;
   max-width: 500px;
   border-left: 6px solid rgb(168, 32, 32);
@@ -261,7 +264,7 @@ width: 100vw;
 h3 {
   text-align: center;
   font-family: 'Exo 2', sans-serif;
-  font-size: 4vw;
+  font-size: 3.6vw;
   color: rgb(168, 32, 32)
 }
 form {
@@ -277,7 +280,7 @@ form {
   align-items: center;
   background-color: rgba(100,127,166,.51);
   margin: 15vw;
-  padding: 20px;
+  padding: 15px;
   font-family: 'Exo 2', sans-serif;
   box-shadow:  10px 10px 20px #647fa6;
 
@@ -360,10 +363,46 @@ footer {
     
      
    }
+   .symptom-card {
+    transform: translate(20%, 50%);
+    width: 60vw;
+    margin-top: 1vh;
+  }
+  .illness-cards p {
+    font-size: 25px;
+  }
 }
-@media (min-width: 500px) {
+@media (min-width: 1000px) {
   .illness-titles {
-    font-size: 30px;
+    font-size: 2.2vw;
+    
 
   }
+  .button  {
+    font-size: 20px;
+  }
+  .edit {
+    font-size: 20px;
+  }
+  .illness-title {
+    margin-bottom: 100px;
+    font-size: 2.2vw;
+  }
+  .illness-cards p {
+    font-size: 35px;
+  }
+  .symptom-description  {
+    font-size: 35px;
+  }
+  #title {
+    font-size: 55px;
+    margin-top: 10px;
+  }
+  .users {
+    font-size: 40px
+  }
+  .logout-button {
+    margin-top: 40px
+  }
+  
 }

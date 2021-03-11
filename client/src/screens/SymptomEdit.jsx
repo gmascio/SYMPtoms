@@ -49,7 +49,7 @@ export default function SymptomEdit(props) {
     <form onSubmit={(e) => {
       e.preventDefault();
       handleUpdate( id, { ...formData, illness_id: symptom.illness_id });
-      history.push('/')
+      history.push(`/illness/${id}`)
     }}>
       <h3>Edit Symptom</h3>
       <label>Name:

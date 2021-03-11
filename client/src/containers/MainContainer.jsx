@@ -46,6 +46,7 @@ function MainContainer(props) {
     setSymptoms((prevState) =>
       prevState.filter((symptom) => symptom.id !== id)
     );
+    history.push("/");
   };
 
   const handleUpdate = async (id, formData) => {
@@ -65,9 +66,6 @@ function MainContainer(props) {
         </Route>
         <Route path="/symptom/new/:illness_id">
           <SymptomCreate handleCreate={handleCreate} currentUser={currentUser} illnesses={illnesses}/>
-        </Route>
-        <Route path="/symptoms">
-          <Symptoms symptoms={symptoms} handleDelete={handleDelete} />
         </Route>
         <Route path = '/symptom/edit/:id/'>
           <SymptomEdit symptoms={symptoms} handleUpdate={handleUpdate} currentUser={currentUser}/>
