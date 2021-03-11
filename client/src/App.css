@@ -268,8 +268,9 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  ;
+  
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -285,6 +286,7 @@ form {
   padding: 10px;
   font-family: 'Exo 2', sans-serif;
   font-size: 20px;
+  margin-left: 5px;
 }
 .container button {
   width: 20vw;
